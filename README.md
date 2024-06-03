@@ -36,12 +36,37 @@ chmod +x tunnel.sh
 ./tunnel.sh
 
  ``` 
-# direct Install 
+# Direct Install from Terminal 
+![Termux](https://img.shields.io/badge/Termux-blue?style=flat)
+![Kali NetHunter](https://img.shields.io/badge/Kali%20NetHunter-blue?style=flat-square)
+![Kali Linux](https://img.shields.io/badge/Kali%20Linux-blue?style=plastic)
 ``` 
 wget https://raw.githubusercontent.com/mashunterbd/tunnel/main/tunnel.sh ; chmod +x tunnel.sh; ./tunnel.sh
 
+```
+# For Windows 
+![Windows](https://img.shields.io/badge/Windows-blueviolet?style=for-the-badge)
+* open windows PowerShell as a normal user:
+* paste this command : for Install 
+  ```
+  winget install --id Cloudflare.cloudflared
+  ```
+  * locate  where is this executable file
+```
+Get-ChildItem -Path C:\ -Filter "cloudflared.exe" -Recurse -ErrorAction SilentlyContinue
+```
+* if the file exist on this location > directory : C:\Program Files (x86)\cloudflared
+  ```
+  cd "C:\Program Files (x86)\cloudflared" ; ls
+  ```
+* Execute this command for port forwarding :
+```
+.\cloudflared-windows-amd64.exe tunnel --url (Link Past)
 
-``` 
+```
+* demo : <b> .\cloudflared-windows-amd64.exe tunnel --url 192.168.0.0:8001 </b>
+
+*  [visit For more information](https://developers.cloudflare.com/cloudflare-one/connections/connect-networks/downloads/)
 
 # Visit for your own port forwarding
 
